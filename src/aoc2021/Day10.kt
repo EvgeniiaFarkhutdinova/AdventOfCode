@@ -1,8 +1,10 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 
 fun main() {
-    val scanner = Scanner(File("src/inputs/10.txt"))
+    val scanner = Scanner(File("src/aoc2021/inputs/10.txt"))
     val startSymbols = arrayOf("(","[","{","<")
     val endSymbols = arrayOf(")","]","}",">")
     val errors = mutableMapOf(")" to 0,"]" to 0,"}" to 0,">" to 0)

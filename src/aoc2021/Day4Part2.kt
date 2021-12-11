@@ -1,8 +1,10 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 
 fun main() {
-    val scanner = Scanner(File("src/inputs/4.txt"))
+    val scanner = Scanner(File("src/aoc2021/inputs/4.txt"))
     scanner.useDelimiter("\\r\n|\n\n")
     val test = scanner.next()
     val drawnNumbers = test.split(",").map { it.toInt() }

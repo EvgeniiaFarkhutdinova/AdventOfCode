@@ -1,9 +1,11 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    val scanner = Scanner(File("src/inputs/7.txt"))
+    val scanner = Scanner(File("src/aoc2021/inputs/7.txt"))
     scanner.useDelimiter(",")
     var crab = mutableListOf<Int>()
     while (scanner.hasNext()) {

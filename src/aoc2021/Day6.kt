@@ -1,9 +1,11 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 
 fun main() {
 
-    val scanner = Scanner(File("src/inputs/6.txt"))
+    val scanner = Scanner(File("src/aoc2021/inputs/6.txt"))
     scanner.useDelimiter(",")
     val lanternfish = LongArray(9)
     while (scanner.hasNext()) {

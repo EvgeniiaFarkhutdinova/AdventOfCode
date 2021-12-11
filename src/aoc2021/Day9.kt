@@ -1,12 +1,14 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 
 fun main() {
-    val scanner = Scanner(File("src/inputs/9.txt"))
-    var inputs = mutableListOf<List<Int>>()
+    val scanner = Scanner(File("src/aoc2021/inputs/9.txt"))
+    val inputs = mutableListOf<List<Int>>()
 
     while (scanner.hasNext()) {
-        var row = mutableListOf<Int>()
+        val row = mutableListOf<Int>()
         scanner.nextLine().split("").forEach { s -> repeat(s.length) { row.add(s.toInt()) } }
         inputs.add(row)
     }
@@ -39,7 +41,7 @@ fun main() {
             val bottom = if(j < inputs.count() - 1) inputs[j + 1][i] else Int.MAX_VALUE
             if (n.isLowPoint(left, right, up, bottom)) {
                 val members = basinMembers(j, i)
-                if (members.count() > 0) basins.add(members.count())
+                if (members.isNotEmpty()) basins.add(members.count())
             }
         }
     }

@@ -1,9 +1,11 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 
 fun main() {
-    val scanner = Scanner(File("src/inputs/8.txt"))
-    var outputs = mutableListOf<String>()
+    val scanner = Scanner(File("src/aoc2021/inputs/8.txt"))
+    val outputs = mutableListOf<String>()
 
     while (scanner.hasNext()) {
         outputs.add(scanner.nextLine())
@@ -15,7 +17,7 @@ fun main() {
 
     println("result is ${counts.sum()}")
 
-    val sum = outputs.map {parseNumbers(it)}.sum()
+    val sum = outputs.map { parseNumbers(it) }.sum()
     println("sum is $sum")
 }
 

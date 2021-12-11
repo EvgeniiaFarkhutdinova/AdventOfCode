@@ -1,9 +1,11 @@
+package aoc2021
+
 import java.io.File
 import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    val scanner = Scanner(File("src/inputs/5.txt"))
+    val scanner = Scanner(File("src/aoc2021/inputs/5.txt"))
     scanner.useDelimiter("\\r\n|\n\n")
 
     val covered = mutableMapOf<Pair<Int,Int>, Int>()
@@ -21,7 +23,7 @@ fun main() {
         if(row.isDiagonal() and !row.isOnlyVertical() and !row.isOnlyHorizontal()) {
             covered.addDiagonal(row.first.first, row.first.second, row.second.first, row.second.second)
         }
-//        covered.printAsMatrix(10,10)
+//        covered.aoc2021.printAsMatrix(10,10)
 //        println()
     }
     covered.printAsMatrix(10,10)
